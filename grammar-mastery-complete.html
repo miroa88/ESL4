@@ -1,0 +1,2000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anahit's Complete Grammar Mastery Guide 🚀</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.7;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+
+        nav {
+            background: #2d3748;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav button {
+            background: #4299e1;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        nav button:hover {
+            background: #3182ce;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(66, 153, 225, 0.4);
+        }
+
+        nav button.active {
+            background: #f5576c;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .unit {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+
+        .unit.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .unit-title {
+            font-size: 2em;
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #f093fb;
+        }
+
+        .concept-box {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border-left: 5px solid #667eea;
+        }
+
+        .concept-box h3 {
+            color: #5f27cd;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .example-box {
+            background: #e8f8f5;
+            padding: 18px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #1abc9c;
+        }
+
+        .example-box strong {
+            color: #16a085;
+        }
+
+        .tip-box {
+            background: #fff3cd;
+            padding: 18px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #ffc107;
+        }
+
+        .tip-box::before {
+            content: "💡 Pro Tip: ";
+            font-weight: bold;
+            color: #f39c12;
+        }
+
+        .error-box {
+            background: #f8d7da;
+            padding: 18px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #dc3545;
+        }
+
+        .error-box::before {
+            content: "⚠️ Common Mistake: ";
+            font-weight: bold;
+            color: #c82333;
+        }
+
+        .practice-section {
+            background: #e3f2fd;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        .practice-section h3 {
+            color: #1976d2;
+            margin-bottom: 20px;
+            font-size: 1.6em;
+        }
+
+        .question {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .question p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+
+        .options {
+            display: grid;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .option {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .option:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+
+        .option.correct {
+            background: #d4edda;
+            border-color: #28a745;
+        }
+
+        .option.incorrect {
+            background: #f8d7da;
+            border-color: #dc3545;
+        }
+
+        .check-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1em;
+            margin-top: 10px;
+            transition: all 0.3s;
+        }
+
+        .check-btn:hover {
+            background: #218838;
+            transform: scale(1.05);
+        }
+
+        .feedback {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            display: none;
+        }
+
+        .feedback.show {
+            display: block;
+        }
+
+        .feedback.correct {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .feedback.incorrect {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .formula {
+            background: #f8f9fa;
+            padding: 18px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+            border: 2px dashed #6c757d;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.05em;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        th {
+            background: #667eea;
+            color: white;
+            padding: 14px;
+            text-align: left;
+        }
+
+        td {
+            padding: 14px;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        tr:hover {
+            background: #f8f9fa;
+        }
+
+        .story-box {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            font-style: italic;
+            border-left: 5px solid #5f27cd;
+        }
+
+        .armenian {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #e17055;
+            font-style: italic;
+        }
+
+        .armenian::before {
+            content: "🇦🇲 Հայերեն: ";
+            font-weight: bold;
+            color: #d63031;
+            font-style: normal;
+        }
+
+        .visual-example {
+            background: #fff;
+            border: 3px solid #667eea;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+        }
+
+        .comparison-table {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .comparison-item {
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        .comparison-item.wrong {
+            background: #ffe6e6;
+            border: 2px solid #ff6b6b;
+        }
+
+        .comparison-item.right {
+            background: #e6ffe6;
+            border: 2px solid #51cf66;
+        }
+
+        .step-by-step {
+            background: #f1f3f5;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .step {
+            background: white;
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .step::before {
+            content: "→ ";
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        .practice-counter {
+            background: #667eea;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            font-size: 1em;
+            margin: 10px 0;
+            min-height: 90px;
+            font-family: inherit;
+        }
+
+        textarea:focus, input[type="text"]:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .explanation-detail {
+            background: #e7f5ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #339af0;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            font-size: 1em;
+            margin: 10px 0;
+        }
+
+        .score-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 25px 0;
+            font-size: 1.1em;
+        }
+
+        .score-card h3 {
+            margin-bottom: 15px;
+        }
+
+        .score-card ul {
+            list-style: none;
+        }
+
+        .score-card li {
+            margin: 10px 0;
+            padding: 8px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .comparison-table {
+                grid-template-columns: 1fr;
+            }
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 Complete Grammar Mastery</h1>
+            <p class="subtitle">Your Comprehensive English Grammar Guide</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Units 8, 10, 11, & 12 • Created for Anahit ✨</p>
+        </header>
+
+        <nav>
+            <button onclick="showUnit('passive')" class="active">Unit 8: Passive Voice</button>
+            <button onclick="showUnit('adjective')">Unit 10: Adjective Clauses</button>
+            <button onclick="showUnit('adverb')">Unit 11: Adverb Clauses</button>
+            <button onclick="showUnit('noun')">Unit 12: Noun Clauses</button>
+        </nav>
+
+        <div class="content">
+            <!-- UNIT 8: PASSIVE VOICE -->
+            <div id="passive" class="unit active">
+                <h2 class="unit-title">🔄 Unit 8: The Passive Voice</h2>
+
+                <div class="story-box">
+                    <p>📖 <strong>Think of passive voice like a movie camera!</strong> In active voice, the camera follows the actor (subject) who does the action. In passive voice, we flip the camera to focus on what's being done, not who's doing it. Sometimes the actor doesn't even appear in the scene!</p>
+                </div>
+
+                <div class="armenian">
+                    Ակտիվ ձայնում (Active Voice) սուբյեկտը կատարում է գործողություն։ Պասիվ ձայնում (Passive Voice) մենք կենտրոնանում ենք գործողության վրա, ոչ թե գործողություն կատարողի վրա։ Օրինակ՝ "The book was written" (Գիրքը գրվեց) փոխարեն "He wrote the book" (Նա գրեց գիրքը)։
+                </div>
+
+                <div class="concept-box">
+                    <h3>🎯 The Magic Formula</h3>
+                    <div class="armenian">
+                        Հիմնական բանաձև՝ BE բայը + Անցյալի դերբայ (Past Participle). Սա միշտ պետք է հիշել!
+                    </div>
+                    
+                    <div class="formula">
+                        ACTIVE: Subject + VERB + Object<br>
+                        ⬇️<br>
+                        PASSIVE: Object + BE (conjugated) + PAST PARTICIPLE + (by + Subject)
+                    </div>
+                    
+                    <div class="step-by-step">
+                        <h4>📝 Step-by-Step Transformation | Քայլ առ քայլ փոփոխություն</h4>
+                        <div class="step">
+                            <strong>Step 1:</strong> Identify the object in the active sentence → This becomes your new subject<br>
+                            Active: Airports implemented <u>new security measures</u>.<br>
+                            → <u>New security measures</u> will be our new subject
+                        </div>
+                        <div class="step">
+                            <strong>Step 2:</strong> Choose the correct form of BE (must match the original tense!)<br>
+                            "implemented" is simple past → use "were"<br>
+                            → New security measures <strong>were</strong>
+                        </div>
+                        <div class="step">
+                            <strong>Step 3:</strong> Change the main verb to its past participle form<br>
+                            implement → implemented<br>
+                            → New security measures <strong>were implemented</strong>
+                        </div>
+                        <div class="step">
+                            <strong>Step 4:</strong> Optional: Add "by + original subject" (only if it's important info)<br>
+                            → New security measures were implemented <strong>(by airports)</strong>.
+                        </div>
+                    </div>
+
+                    <div class="visual-example">
+                        <h4>🎬 Visual Example - Watch the Transformation!</h4>
+                        <table style="box-shadow: none;">
+                            <tr style="background: #e3f2fd;">
+                                <th>Active Voice</th>
+                                <th>Passive Voice</th>
+                            </tr>
+                            <tr>
+                                <td><strong>The teacher</strong> explains <u>the lesson</u>.</td>
+                                <td><strong>The lesson</strong> is explained (by the teacher).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Scientists</strong> discovered <u>a new species</u>.</td>
+                                <td><strong>A new species</strong> was discovered (by scientists).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>People</strong> have used <u>computers</u> for decades.</td>
+                                <td><strong>Computers</strong> have been used for decades.</td>
+                            </tr>
+                        </table>
+                        <div class="armenian">
+                            Նկատեք՝ օբյեկտը (ինչ որ բանը, որի վրա գործողությունն է կատարվում) դառնում է սուբյեկտ։
+                        </div>
+                    </div>
+                </div>
+
+                <div class="concept-box">
+                    <h3>🎭 Complete Guide to All Passive Forms</h3>
+                    <div class="armenian">
+                        Բոլոր ժամանակաձևերը պասիվ ձայնով։ Սա ամբողջական ցանկն է - պետք է բոլորը իմանալ։
+                    </div>
+
+                    <table>
+                        <tr>
+                            <th>Tense</th>
+                            <th>Formula</th>
+                            <th>Example from Real Life</th>
+                        </tr>
+                        <tr>
+                            <td><strong>Simple Present</strong><br><small>Ներկա պարզ</small></td>
+                            <td>am/is/are + past participle</td>
+                            <td>English <span class="highlight">is spoken</span> in many countries.<br><small>Անգլերենը խոսվում է շատ երկրներում։</small></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Simple Past</strong><br><small>Անցյալ պարզ</small></td>
+                            <td>was/were + past participle</td>
+                            <td>The Mona Lisa <span class="highlight">was painted</span> by Leonardo da Vinci.<br><small>Մոնա Լիզան նկարվեց Լեոնարդո դա Վինչիի կողմից։</small></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Present Perfect</strong><br><small>Ներկա կատարյալ</small></td>
+                            <td>has/have been + past participle</td>
+                            <td>The problem <span class="highlight">has been solved</span>.<br><small>Խնդիրը լուծվել է։</small></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Past Perfect</strong><br><small>Անցյալ կատարյալ</small></td>
+                            <td>had been + past participle</td>
+                            <td>The report <span class="highlight">had been finished</span> before the meeting.<br><small>Զեկույցը ավարտվել էր հանդիպումից առաջ։</small></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Future (will)</strong><br><small>Ապառնի</small></td>
+                            <td>will be + past participle</td>
+                            <td>The results <span class="highlight">will be announced</span> tomorrow.<br><small>Արդյունքները կհայտարարվեն վաղը։</small></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Modals</strong><br><small>Մոդալ բայեր</small></td>
+                            <td>modal + be + past participle</td>
+                            <td>This problem <span class="highlight">can be solved</span> easily.<br><small>Այս խնդիրը կարող է հեշտությամբ լուծվել։</small></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Modal Perfect</strong><br><small>Մոդալ կատարյալ</small></td>
+                            <td>modal + have been + past participle</td>
+                            <td>The accident <span class="highlight">could have been prevented</span>.<br><small>Դժբախտ պատահարը կարող էր կանխվել։</small></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gerund</strong><br><small>Դերբայական գոյական</small></td>
+                            <td>being + past participle</td>
+                            <td>Nobody likes <span class="highlight">being criticized</span>.<br><small>Ոչ ոք չի սիրում քննադատվել։</small></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Infinitive</strong><br><small>Անորոշ դերբայ</small></td>
+                            <td>to be + past participle</td>
+                            <td>This needs <span class="highlight">to be done</span> immediately.<br><small>Սա պետք է անմիջապես արվի։</small></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="concept-box">
+                    <h3>📊 Most Common Passive Verbs in Academic Writing</h3>
+                    <div class="armenian">
+                        Ակադեմիական գրելաոճում ամենից հաճախ օգտագործվող պասիվ բայերը
+                    </div>
+                    <div class="visual-example">
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
+                            <div style="background: #e8f8f5; padding: 10px; border-radius: 8px;">
+                                <strong>can be:</strong><br>
+                                • seen<br>
+                                • used<br>
+                                • found
+                            </div>
+                            <div style="background: #fff3cd; padding: 10px; border-radius: 8px;">
+                                <strong>has/have been:</strong><br>
+                                • made<br>
+                                • shown<br>
+                                • found
+                            </div>
+                            <div style="background: #f8d7da; padding: 10px; border-radius: 8px;">
+                                <strong>is/are:</strong><br>
+                                • known<br>
+                                • needed<br>
+                                • based
+                            </div>
+                            <div style="background: #e7f5ff; padding: 10px; border-radius: 8px;">
+                                <strong>was/were:</strong><br>
+                                • conducted<br>
+                                • analyzed<br>
+                                • reported
+                            </div>
+                            <div style="background: #d4edda; padding: 10px; border-radius: 8px;">
+                                <strong>should be:</strong><br>
+                                • considered<br>
+                                • noted<br>
+                                • addressed
+                            </div>
+                            <div style="background: #e3f2fd; padding: 10px; border-radius: 8px;">
+                                <strong>were asked</strong><br>
+                                <strong>was reported</strong><br>
+                                <strong>is needed</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="concept-box">
+                    <h3>🎯 When to Use Passive Voice - 4 Critical Situations</h3>
+                    <div class="armenian">
+                        Չորս կարևոր իրավիճակներ, երբ պետք է օգտագործել պասիվ ձայնը
+                    </div>
+                    
+                    <div class="explanation-detail">
+                        <h4>1️⃣ To Focus Attention on New/Important Information</h4>
+                        <div class="armenian">
+                            Երբ ուզում ենք ուշադրություն հրավիրել նոր կամ կարևոր տեղեկության վրա
+                        </div>
+                        <p><strong>The Rule:</strong> Put the most important information at the beginning (subject position).</p>
+                        <div class="example-box">
+                            Barack Obama <span class="highlight">was first elected</span> president in 2008.<br>
+                            <small>→ We care about Obama, not about the millions of voters</small><br><br>
+                            
+                            The art world has long admired Banksy, a mysterious street artist. In spite of great efforts, Banksy's identity <span class="highlight">has not been confirmed</span>.<br>
+                            <small>→ Focus on Banksy's identity, not on "people" who tried to confirm it</small>
+                        </div>
+                        <div class="tip-box">
+                            This is called "information flow" - move from known (old) information to new information smoothly.
+                        </div>
+                    </div>
+
+                    <div class="explanation-detail">
+                        <h4>2️⃣ To Avoid Repetitive/Unnecessary Information</h4>
+                        <div class="armenian">
+                            Երբ ակնհայտ է, թե ով է կատարել գործողությունը, ուստի կրկնելը ավելորդ է
+                        </div>
+                        <p><strong>The Rule:</strong> When it's obvious who did the action, don't mention them again.</p>
+                        <div class="example-box">
+                            Students <span class="highlight">were tested</span> at the beginning and end of the semester. (We assume teachers were the ones who tested students.)<br><br>
+                            
+                            Male professors are much more likely <span class="highlight">to be described</span> as "brilliant" in student evaluations. (We know students describe the professors because these are student evaluations.)
+                        </div>
+                    </div>
+
+                    <div class="explanation-detail">
+                        <h4>3️⃣ To Express Information Politely or Avoid Blame</h4>
+                        <div class="armenian">
+                            Երբ ուզում ենք ավելի քաղաքավարի լինել կամ խուսափել ուղղակի մեղադրանքից
+                        </div>
+                        <p><strong>The Rule:</strong> Use passive to soften criticism or avoid pointing fingers.</p>
+                        <div class="example-box">
+                            The candidate <span class="highlight">was accused</span> of spreading false rumors about his competition.<br>
+                            <small>→ More diplomatic than "Someone accused the candidate..."</small><br><br>
+                            
+                            Students <span class="highlight">are not</span> always <span class="highlight">given</span> the option of retaking a test.<br>
+                            <small>→ Avoids directly criticizing teachers</small><br><br>
+                            
+                            He apologized for remarks that <span class="highlight">were considered</span> offensive.<br>
+                            <small>→ Doesn't say who found them offensive</small>
+                        </div>
+                    </div>
+
+                    <div class="explanation-detail">
+                        <h4>4️⃣ To Convey Objectivity and Impersonal Tone</h4>
+                        <div class="armenian">
+                            Գիտական հոդվածներում անկողմնակալ և անձնազուրկ տոն ստեղծելու համար
+                        </div>
+                        <p><strong>The Rule:</strong> In scientific/academic writing, use passive to sound objective and professional.</p>
+                        <div class="example-box">
+                            Participants <span class="highlight">should be given</span> as much information as possible about the research ahead of time.<br>
+                            <small>→ Focuses on the procedure, not on "researchers"</small><br><br>
+                            
+                            Results <span class="highlight">were analyzed</span> with a standard statistical method.<br>
+                            <small>→ Emphasizes the scientific process</small>
+                        </div>
+                        <div class="tip-box">
+                            <strong>Fun Fact:</strong> About 30% of clauses in scientific articles use passive voice! This helps create that "objective science" tone.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="error-box">
+                    <strong>Common Error 8.1: Using the Wrong Verb Form</strong><br>
+                    <div class="armenian">
+                        Սխալ բայաձև օգտագործելը - Հիշեք՝ միշտ անցյալի դերբայ (Past Participle), ոչ թե պարզ անցյալ
+                    </div>
+                    <div class="comparison-table">
+                        <div class="comparison-item wrong">
+                            ❌ Several languages are <del>spoke</del> in Switzerland.<br>
+                            <small><strong>Wrong!</strong> "spoke" is simple past, NOT past participle</small>
+                        </div>
+                        <div class="comparison-item right">
+                            ✅ Several languages are <strong>spoken</strong> in Switzerland.<br>
+                            <small><strong>Correct!</strong> "spoken" is the past participle of "speak"</small>
+                        </div>
+                    </div>
+                    <p><strong>Remember:</strong> The formula is BE + PAST PARTICIPLE (not simple past!)</p>
+                    <div class="visual-example">
+                        <h4>Common Irregular Past Participles:</h4>
+                        <table style="font-size: 0.95em;">
+                            <tr style="background: #f8f9fa;">
+                                <th>Base</th>
+                                <th>Simple Past</th>
+                                <th>Past Participle</th>
+                                <th>Example in Passive</th>
+                            </tr>
+                            <tr>
+                                <td>write</td>
+                                <td>wrote</td>
+                                <td><strong>written</strong></td>
+                                <td>The book was <strong>written</strong> in 1999.</td>
+                            </tr>
+                            <tr>
+                                <td>speak</td>
+                                <td>spoke</td>
+                                <td><strong>spoken</strong></td>
+                                <td>English is <strong>spoken</strong> here.</td>
+                            </tr>
+                            <tr>
+                                <td>break</td>
+                                <td>broke</td>
+                                <td><strong>broken</strong></td>
+                                <td>The vase was <strong>broken</strong>.</td>
+                            </tr>
+                            <tr>
+                                <td>choose</td>
+                                <td>chose</td>
+                                <td><strong>chosen</strong></td>
+                                <td>She was <strong>chosen</strong> as leader.</td>
+                            </tr>
+                            <tr>
+                                <td>drive</td>
+                                <td>drove</td>
+                                <td><strong>driven</strong></td>
+                                <td>The car is <strong>driven</strong> daily.</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="error-box">
+                    <strong>Common Error 8.2: Forgetting "BE"</strong><br>
+                    <div class="armenian">
+                        BE բայի բացակայությունը - Հիշեք՝ պասիվում ՄԻՇՏ պետք է լինի BE բայ
+                    </div>
+                    <div class="comparison-table">
+                        <div class="comparison-item wrong">
+                            ❌ Mo Yan <del>interviewed</del> after winning the Nobel Prize.<br>
+                            <small><strong>Missing "was"!</strong> This is incomplete</small>
+                        </div>
+                        <div class="comparison-item right">
+                            ✅ Mo Yan <strong>was interviewed</strong> after winning the Nobel Prize.<br>
+                            <small><strong>Complete!</strong> Has BE (was) + past participle (interviewed)</small>
+                        </div>
+                    </div>
+                    <p><strong>Key Rule:</strong> Passive voice MUST have: BE verb + past participle</p>
+                    <p>Without BE, it's not passive - it's nothing! ❌</p>
+                </div>
+
+                <div class="error-box">
+                    <strong>Common Error 8.3: Using Passive with Intransitive Verbs</strong><br>
+                    <div class="armenian">
+                        Պասիվը միայն անցողական բայերի հետ - Անցողական բայերը կարող են ունենալ ուղղակի խնդիր
+                    </div>
+                    <div class="comparison-table">
+                        <div class="comparison-item wrong">
+                            ❌ 100 million people <del>were died</del> in the pandemic.<br>
+                            <small><strong>Wrong!</strong> "Die" cannot take an object, so no passive</small>
+                        </div>
+                        <div class="comparison-item right">
+                            ✅ 100 million people <strong>died</strong> in the pandemic.<br>
+                            <small><strong>Correct!</strong> "Die" stays active</small>
+                        </div>
+                    </div>
+                    <p><strong>The Test:</strong> Can you answer "what?" or "whom?" after the verb?</p>
+                    <ul style="margin-left: 25px; margin-top: 10px;">
+                        <li>✅ "Build what?" → a house (transitive - CAN be passive)</li>
+                        <li>❌ "Happen what?" → nothing! (intransitive - CANNOT be passive)</li>
+                    </ul>
+                    <div class="tip-box">
+                        Common intransitive verbs that CANNOT be passive: die, happen, occur, exist, appear, arrive, come, go, rise, fall, sleep
+                    </div>
+                </div>
+
+                <div class="practice-section">
+                    <h3>🎮 Comprehensive Practice - 20 Questions</h3>
+                    <div class="armenian">
+                        Լիարժեք վարժություններ - 20 հարց սովորածը ամրապնդելու համար
+                    </div>
+                    
+                    <!-- Question 1 -->
+                    <div class="practice-counter">Question 1 / 20</div>
+                    <div class="question">
+                        <p><strong>Transform to passive voice:</strong></p>
+                        <p>"Scientists discovered a new planet last year."</p>
+                        <input type="text" id="passive-a1" placeholder="Type your complete sentence here...">
+                        <button class="check-btn" onclick="checkPassive1()">Check Answer</button>
+                        <div class="feedback" id="passive-f1"></div>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="practice-counter">Question 2 / 20</div>
+                    <div class="question">
+                        <p><strong>Which sentence is grammatically correct?</strong></p>
+                        <div class="options">
+                            <div class="option" onclick="selectOption(this, false, 'q2')">A) The book was wrote by Stephen King in 1974.</div>
+                            <div class="option" onclick="selectOption(this, true, 'q2')">B) The book was written by Stephen King in 1974.</div>
+                            <div class="option" onclick="selectOption(this, false, 'q2')">C) The book is wrote by Stephen King in 1974.</div>
+                            <div class="option" onclick="selectOption(this, false, 'q2')">D) The book written by Stephen King in 1974.</div>
+                        </div>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="practice-counter">Question 3 / 20</div>
+                    <div class="question">
+                        <p><strong>Fill in with the correct passive form (simple past):</strong></p>
+                        <p>"The results __________ (analyze) with advanced software yesterday."</p>
+                        <input type="text" id="passive-a3" placeholder="Type the passive form...">
+                        <button class="check-btn" onclick="checkPassive3()">Check Answer</button>
+                        <div class="feedback" id="passive-f3"></div>
+                    </div>
+
+                    <!-- Question 4 -->
+                    <div class="practice-counter">Question 4 / 20</div>
+                    <div class="question">
+                        <p><strong>Fix the error in this sentence:</strong></p>
+                        <p>"The experiment was conduct by researchers in several countries."</p>
+                        <input type="text" id="passive-a4" placeholder="Write the corrected sentence...">
+                        <button class="check-btn" onclick="checkPassive4()">Check Answer</button>
+                        <div class="feedback" id="passive-f4"></div>
+                    </div>
+
+                    <!-- Question 5 -->
+                    <div class="practice-counter">Question 5 / 20</div>
+                    <div class="question">
+                        <p><strong>Which sentences CAN be made passive? (Select the correct ones)</strong></p>
+                        <div class="armenian">Կարող են դառնալ պասիվ միայն անցողական բայերը (transitive verbs)</div>
+                        <div class="options">
+                            <div class="option" onclick="selectOption(this, true, 'q5a')">A) The teacher explained the lesson clearly.</div>
+                            <div class="option" onclick="selectOption(this, false, 'q5b')">B) The accident happened yesterday morning.</div>
+                            <div class="option" onclick="selectOption(this, true, 'q5c')">C) Someone stole my bike last night.</div>
+                            <div class="option" onclick="selectOption(this, false, 'q5d')">D) Many people died in the war.</div>
+                        </div>
+                    </div>
+
+                    <!-- Question 6 -->
+                    <div class="practice-counter">Question 6 / 20</div>
+                    <div class="question">
+                        <p><strong>Change to passive (Present Perfect):</strong></p>
+                        <p>"They have built three new schools in our city this year."</p>
+                        <input type="text" id="passive-a6" placeholder="Type your answer...">
+                        <button class="check-btn" onclick="checkPassive6()">Check Answer</button>
+                        <div class="feedback" id="passive-f6"></div>
+                    </div>
+
+                    <!-- Question 7 -->
+                    <div class="practice-counter">Question 7 / 20</div>
+                    <div class="question">
+                        <p><strong>Complete with modal passive:</strong></p>
+                        <p>"This problem __________ (can/solve) easily with modern technology."</p>
+                        <input type="text" id="passive-a7" placeholder="can + be + past participle">
+                        <button class="check-btn" onclick="checkPassive7()">Check Answer</button>
+                        <div class="feedback" id="passive-f7"></div>
+                    </div>
+
+                    <!-- Question 8 -->
+                    <div class="practice-counter">Question 8 / 20</div>
+                    <div class="question">
+                        <p><strong>Which sentence is correct?</strong></p>
+                        <div class="options">
+                            <div class="option" onclick="selectOption(this, false, 'q8')">A) The data was collected by we last month.</div>
+                            <div class="option" onclick="selectOption(this, true, 'q8')">B) The data was collected by us last month.</div>
+                            <div class="option" onclick="selectOption(this, false, 'q8')">C) The data were collecting by us last month.</div>
+                            <div class="option" onclick="selectOption(this, false, 'q8')">D) The data collected by us last month.</div>
+                        </div>
+                        <p style="font-size: 0.9em; color: #666; margin-top: 10px;">Hint: After "by" use object pronouns (me, us, him, her, them)</p>
+                    </div>
+
+                    <!-- Question 9 -->
+                    <div class="practice-counter">Question 9 / 20</div>
+                    <div class="question">
+                        <p><strong>Rewrite using passive gerund (being + past participle):</strong></p>
+                        <p>"Nobody likes it when others criticize them in public."</p>
+                        <p>Nobody likes __________ in public.</p>
+                        <input type="text" id="passive-a9" placeholder="being + ...">
+                        <button class="check-btn" onclick="checkPassive9()">Check Answer</button>
+                        <div class="feedback" id="passive-f9"></div>
+                    </div>
+
+                    <!-- Question 10 -->
+                    <div class="practice-counter">Question 10 / 20</div>
+                    <div class="question">
+                        <p><strong>Past Modal Passive:</strong></p>
+                        <p>"The accident __________ (could/prevent) if the driver had been more careful."</p>
+                        <div class="armenian">Անցյալի մոդալ պասիվ՝ modal + have been + past participle</div>
+                        <input type="text" id="passive-a10" placeholder="could have been prevented">
+                        <button class="check-btn" onclick="checkPassive10()">Check Answer</button>
+                        <div class="feedback" id="passive-f10"></div>
+                    </div>
+
+                    <!-- Question 11 -->
+                    <div class="practice-counter">Question 11 / 20</div>
+                    <div class="question">
+                        <p><strong>Choose the correct passive infinitive:</strong></p>
+                        <div class="options">
+                            <div class="option" onclick="selectOption(this, false, 'q11')">A) The problem needs to solve immediately.</div>
+                            <div class="option" onclick="selectOption(this, true, 'q11')">B) The problem needs to be solved immediately.</div>
+                            <div class="option" onclick="selectOption(this, false, 'q11')">C) The problem needs be solved immediately.</div>
+                            <div class="option" onclick="selectOption(this, false, 'q11')">D) The problem needs solving immediately.</div>
+                        </div>
+                    </div>
+
+                    <!-- Question 12 -->
+                    <div class="practice-counter">Question 12 / 20</div>
+                    <div class="question">
+                        <p><strong>Transform to passive - maintain the progressive tense:</strong></p>
+                        <p>"The committee is reviewing all applications this week."</p>
+                        <input type="text" id="passive-a12" placeholder="All applications are being...">
+                        <button class="check-btn" onclick="checkPassive12()">Check Answer</button>
+                        <div class="feedback" id="passive-f12"></div>
+                    </div>
+
+                    <!-- Question 13 -->
+                    <div class="practice-counter">Question 13 / 20</div>
+                    <div class="question">
+                        <p><strong>Which statement about passive voice is TRUE?</strong></p>
+                        <div class="options">
+                            <div class="option" onclick="selectOption(this, false, 'q13')">A) All verbs can be used in passive voice</div>
+                            <div class="option" onclick="selectOption(this, false, 'q13')">B) Passive voice always requires "by + agent"</div>
+                            <div class="option" onclick="selectOption(this, true, 'q13')">C) Passive voice is very common in academic writing</div>
+                            <div class="option" onclick="selectOption(this, false, 'q13')">D) Passive voice should never be used in English</div>
+                        </div>
+                    </div>
+
+                    <!-- Question 14 -->
+                    <div class="practice-counter">Question 14 / 20</div>
+                    <div class="question">
+                        <p><strong>Identify and correct the error:</strong></p>
+                        <p>"Many people were died in the earthquake last year."</p>
+                        <textarea id="passive-a14" placeholder="Explain what's wrong and write the correct sentence..."></textarea>
+                        <button class="check-btn" onclick="checkPassive14()">Check Answer</button>
+                        <div class="feedback" id="passive-f14"></div>
+                    </div>
+
+                    <!-- Question 15 -->
+                    <div class="practice-counter">Question 15 / 20</div>
+                    <div class="question">
+                        <p><strong>Real-world application - Academic Writing:</strong></p>
+                        <p>You're writing a science report. Which version is more appropriate?</p>
+                        <div class="options">
+                            <div class="option" onclick="selectOption(this, false, 'q15')">A) We conducted the experiment in controlled conditions.</div>
+                            <div class="option" onclick="selectOption(this, true, 'q15')">B) The experiment was conducted in controlled conditions.</div>
+                        </div>
+                        <p style="margin-top: 10px; font-size: 0.9em; color: #666;">Think: Which sounds more objective and professional?</p>
+                    </div>
+
+                    <!-- Question 16 -->
+                    <div class="practice-counter">Question 16 / 20</div>
+                    <div class="question">
+                        <p><strong>Change to passive (Past Perfect):</strong></p>
+                        <p>"Someone had stolen the painting before the museum opened."</p>
+                        <input type="text" id="passive-a16" placeholder="The painting had been...">
+                        <button class="check-btn" onclick="checkPassive16()">Check Answer</button>
+                        <div class="feedback" id="passive-f16"></div>
+                    </div>
+
+                    <!-- Question 17 -->
+                    <div class="practice-counter">Question 17 / 20</div>
+                    <div class="question">
+                        <p><strong>Fill in the blank (Future Passive):</strong></p>
+                        <p>"The new bridge __________ (complete) by next summer."</p>
+                        <input type="text" id="passive-a17" placeholder="will be completed">
+                        <button class="check-btn" onclick="checkPassive17()">Check Answer</button>
+                        <div class="feedback" id="passive-f17"></div>
+                    </div>
+
+                    <!-- Question 18 -->
+                    <div class="practice-counter">Question 18 / 20</div>
+                    <div class="question">
+                        <p><strong>Multiple verbs - Change both to passive:</strong></p>
+                        <p>"They built the house in 1995 and renovated it in 2010."</p>
+                        <textarea id="passive-a18" placeholder="The house was built..."></textarea>
+                        <button class="check-btn" onclick="checkPassive18()">Check Answer</button>
+                        <div class="feedback" id="passive-f18"></div>
+                    </div>
+
+                    <!-- Question 19 -->
+                    <div class="practice-counter">Question 19 / 20</div>
+                    <div class="question">
+                        <p><strong>When should you include "by + agent"?</strong></p>
+                        <div class="options">
+                            <div class="option" onclick="selectOption(this, false, 'q19')">A) Always - it's required in passive voice</div>
+                            <div class="option" onclick="selectOption(this, true, 'q19')">B) Only when the agent is important or surprising information</div>
+                            <div class="option" onclick="selectOption(this, false, 'q19')">C) Never - passive voice never mentions the agent</div>
+                            <div class="option" onclick="selectOption(this, false, 'q19')">D) Only in formal academic writing</div>
+                        </div>
+                    </div>
+
+                    <!-- Question 20 -->
+                    <div class="practice-counter">Question 20 / 20</div>
+                    <div class="question">
+                        <p><strong>Final Challenge - Explain in your own words:</strong></p>
+                        <p>Why do scientists and researchers use passive voice so frequently in their papers? Give at least 2 reasons.</p>
+                        <textarea id="passive-a20" placeholder="Write your explanation here... (Think about objectivity, focus, and professionalism)"></textarea>
+                        <button class="check-btn" onclick="checkPassive20()">Check Answer</button>
+                        <div class="feedback" id="passive-f20"></div>
+                    </div>
+                </div>
+
+                <div class="score-card">
+                    <h3>🎯 Mastery Tips for Passive Voice</h3>
+                    <div class="armenian">
+                        Տիրապետության խորհուրդներ պասիվ ձայնի համար
+                    </div>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>✅ Always check: Is the verb transitive? (Can it take an object?)</li>
+                        <li>✅ Remember the formula: BE (conjugated) + PAST PARTICIPLE</li>
+                        <li>✅ In academic writing: passive = professional, objective tone</li>
+                        <li>✅ "By + agent" is optional - only include if it adds important info</li>
+                        <li>✅ Practice with real examples: read news articles and scientific papers</li>
+                        <li>✅ Learn irregular past participles by heart (spoken, written, done, etc.)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- UNIT 10: ADJECTIVE CLAUSES -->
+            <div id="adjective" class="unit">
+                <h2 class="unit-title">🎨 Unit 10: Adjective Clauses (Relative Clauses)</h2>
+
+                <div class="story-box">
+                    <p>📖 <strong>Think of adjective clauses as detective clues!</strong> They give us extra information to identify someone or something. They answer: "Which one?" or "What kind?" Just like a detective describes a suspect!</p>
+                </div>
+
+                <div class="armenian">
+                    Ածական ստորադասյալ նախադասություններ (Adjective Clauses) նկարագրում և ճշտում են գոյականները։ Սկսվում են հարաբերական դերանուններով (relative pronouns)՝ that, who, whom, which, whose
+                </div>
+
+                <div class="concept-box">
+                    <h3>🎯 What Are Adjective Clauses?</h3>
+                    <p>An adjective clause (also called a <strong>relative clause</strong>) modifies a noun or noun phrase. It contains a subject and verb, and begins with a relative pronoun.</p>
+                    
+                    <div class="formula">
+                        Noun + RELATIVE PRONOUN + Subject + Verb
+                    </div>
+
+                    <div class="example-box">
+                        <strong>Simple sentence:</strong> Transpiration is a process.<br>
+                        <strong>With adjective clause:</strong> Transpiration is a process <span class="highlight">that involves plants</span>.<br>
+                        <small>↑ The clause describes "process"</small>
+                        <div class="armenian">
+                            Թրանսպիրացիան գործընթաց է, որը վերաբերում է բույսերին։
+                        </div>
+                    </div>
+                </div>
+
+                <div class="concept-box">
+                    <h3>🔑 Choosing the Right Relative Pronoun</h3>
+                    <div class="armenian">
+                        Ճիշտ հարաբերական դերանուն ընտրելը՝ կախված է մարդկանց կամ իրերի համար, սուբյեկտ կամ օբյեկտ դիրքում
+                    </div>
+
+                    <table>
+                        <tr>
+                            <th>Use For</th>
+                            <th>Position</th>
+                            <th>Pronoun</th>
+                            <th>Example</th>
+                        </tr>
+                        <tr>
+                            <td><strong>People</strong><br><small>Մարդիկ</small></td>
+                            <td>Subject</td>
+                            <td><strong>who</strong> or <strong>that</strong></td>
+                            <td>Jane Austen is the author <span class="highlight">who</span> wrote Emma.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>People</strong><br><small>Մարդիկ</small></td>
+                            <td>Object</td>
+                            <td><strong>whom</strong> or <strong>that</strong></td>
+                            <td>Rosa Parks is the activist <span class="highlight">whom</span> the police arrested.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Things</strong><br><small>Իրեր</small></td>
+                            <td>Subject</td>
+                            <td><strong>that</strong> or <strong>which</strong></td>
+                            <td>Peru is a country <span class="highlight">that</strong> is located in South America.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Things</strong><br><small>Իրեր</small></td>
+                            <td>Object</td>
+                            <td><strong>that</strong> or <strong>which</strong></td>
+                            <td>Peru is a country <span class="highlight">that</span> millions visit each year.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Possession</strong><br><small>Պատկանելիություն</small></td>
+                            <td>Any</td>
+                            <td><strong>whose</strong></td>
+                            <td>The student <span class="highlight">whose</span> book I borrowed is here.</td>
+                        </tr>
+                    </table>
+
+                    <div class="tip-box">
+                        In academic writing, use <strong>whom</strong> instead of <strong>who</strong> for objects - it sounds more formal and professional!
+                    </div>
+                </div>
+
+                <div class="concept-box">
+                    <h3>📊 Restrictive vs. Nonrestrictive Clauses</h3>
+                    <div class="armenian">
+                        Կարևոր տարբերություն՝ սահմանափակող (restrictive) և ոչ սահմանափակող (nonrestrictive) նախադասություններ
+                    </div>
+
+                    <div class="explanation-detail">
+                        <h4>1️⃣ Restrictive Clauses (NO commas) - Essential Information</h4>
+                        <p><strong>Purpose:</strong> Identifies WHICH ONE we're talking about - essential to meaning</p>
+                        <div class="example-box">
+                            The ice cream flavor <span class="highlight">that is ordered most often</span> is vanilla.<br>
+                            <small>→ Tells us WHICH flavor (essential information)</small>
+                            <div class="armenian">
+                                Պաղպաղակի համը, որը ամենից հաճախ են պատվիրում, վանիլն է։
+                            </div>
+                        </div>
+                        <p><strong>Rule:</strong> NO commas, can use "that" or "which"</p>
+                    </div>
+
+                    <div class="explanation-detail">
+                        <h4>2️⃣ Nonrestrictive Clauses (USE commas) - Extra Information</h4>
+                        <p><strong>Purpose:</strong> Adds extra detail but not essential - we already know which one</p>
+                        <div class="example-box">
+                            Vanilla is more popular than chocolate, <span class="highlight">which is people's number two choice</span>.<br>
+                            <small>→ Adds extra info about chocolate (not essential)</small>
+                            <div class="armenian">
+                                Վանիլը ավելի հանրաճանաչ է, քան շոկոլադը, որը երկրորդ տեղում է մարդկանց ընտրություններում։
+                            </div>
+                        </div>
+                        <p><strong>Rule:</strong> USE commas, NEVER use "that" (only "which" for things, "who" for people)</p>
+                    </div>
+
+                    <div class="comparison-table">
+                        <div class="comparison-item wrong">
+                            ❌ Vanilla is popular, <del>that</del> is my favorite.<br>
+                            <small>Wrong! Can't use "that" after comma</small>
+                        </div>
+                        <div class="comparison-item right">
+                            ✅ Vanilla is popular, <strong>which</strong> is my favorite.<br>
+                            <small>Correct! Use "which" after comma</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="concept-box">
+                    <h3>✂️ Reduced Adjective Clauses</h3>
+                    <div class="armenian">
+                        Կարճացված ածական նախադասություններ՝ ավելի հակիրճ դարձնելու համար
+                    </div>
+
+                    <div class="step-by-step">
+                        <h4>Method 1: With verb "be" - Delete pronoun and "be"</h4>
+                        <div class="step">
+                            Original: The fish <del>that is</del> upsetting the local ecosystem...<br>
+                            Reduced: The fish <strong>upsetting</strong> the local ecosystem...
+                        </div>
+                        <div class="step">
+                            Original: The fish <del>that is</del> known as the snakehead fish...<br>
+                            Reduced: The fish <strong>known</strong> as the snakehead fish...
+                        </div>
+                    </div>
+
+                    <div class="step-by-step">
+                        <h4>Method 2: With other verbs - Delete pronoun, add -ing</h4>
+                        <div class="step">
+                            Original: Anyone <del>who wants</del> to be a pilot...<br>
+                            Reduced: Anyone <strong>wanting</strong> to be a pilot...
+                        </div>
+                        <div class="step">
+                            Original: Students <del>who study</del> hard...<br>
+                            Reduced: Students <strong>studying</strong> hard...
+                        </div>
+                    </div>
+
+                    <div class="error-box">
+                        <strong>Important:</strong> You can only reduce when the relative pronoun is the SUBJECT of the clause!
+                    </div>
+                </div>
+
+                <div class="error-box">
+                    <strong>Common Error 10.1: Forgetting the relative pronoun</strong><br>
+                    <div class="armenian">
+                        Հարաբերական դերանուն մոռանալը սուբյեկտ դիրքում
+                    </div>
+                    <div class="comparison-table">
+                        <div class="comparison-item wrong">
+                            ❌ A university major <del>Ø</del> deals with business is likely to result in higher earnings.<br>
+                            <small>Missing "that"!</small>
+                        </div>
+                        <div class="comparison-item right">
+                            ✅ A university major <strong>that</strong> deals with business is likely to result in higher earnings.<br>
+                            <small>Correct with "that"</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="error-box">
+                    <strong>Common Error 10.2: Using wrong pronoun for things</strong><br>
+                    <div class="armenian">
+                        Սխալ դերանուն օգտագործելը իրերի համար
+                    </div>
+                    <div class="comparison-table">
+                        <div class="comparison-item wrong">
+                            ❌ California, <del>that</del> was the most populous state...<br>
+                            <small>Wrong pronoun!</small>
+                        </div>
+                        <div class="comparison-item right">
+                            ✅ California, <strong>which</strong> was the most populous state...<br>
+                            <small>Use "which" for things</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-section">
+                    <h3>🎮 Practice - 15 Questions</h3>
+
+                    <div class="practice-counter">Question 1 / 15</div>
+                    <div class="question">
+                        <p><strong>Combine using an adjective clause:</strong></p>
+                        <p>"I know a woman. She speaks five languages."</p>
+                        <input type="text" id="adj-a1" placeholder="I know a woman...">
+                        <button class="check-btn" onclick="checkAdj1()">Check</button>
+                        <div class="feedback" id="adj-f1"></div>
+                    </div>
+
+                    <div class="practice-counter">Question 2 / 15</div>
+                    <div class="question">
+                        <p><strong>Choose the correct pronoun:</strong></p>
+                        <p>"The scientist _____ discovered penicillin was Alexander Fleming."</p>
+                        <div class="options">
+                            <div class="option" onclick="selectOption(this, false, 'adj-q2')">A) which</div>
+                            <div class="option" onclick="selectOption(this, true, 'adj-q2')">B) who</div>
+                            <div class="option" onclick="selectOption(this, false, 'adj-q2')">C) whom</div>
+                            <div class="option" onclick="selectOption(this, false, 'adj-q2')">D) whose</div>
+                        </div>
+                    </div>
+
+                    <div class="practice-counter">Question 3 / 15</div>
+                    <div class="question">
+                        <p><strong>Reduce this adjective clause:</strong></p>
+                        <p>"The students who are studying for finals are very stressed."</p>
+                        <input type="text" id="adj-a3" placeholder="The students...">
+                        <button class="check-btn" onclick="checkAdj3()">Check</button>
+                        <div class="feedback" id="adj-f3"></div>
+                    </div>
+
+                    <div class="practice-counter">Question 4 / 15</div>
+                    <div class="question">
+                        <p><strong>Add commas if needed:</strong></p>
+                        <p>"My sister who lives in Boston is a doctor."</p>
+                        <textarea id="adj-a4" placeholder="Rewrite with or without commas and explain why..."></textarea>
+                        <button class="check-btn" onclick="checkAdj4()">Check</button>
+                        <div class="feedback" id="adj-f4"></div>
+                    </div>
+
+                    <div class="practice-counter">Question 5 / 15</div>
+                    <div class="question">
+                        <p><strong>Which is correct?</strong></p>
+                        <div class="options">
+                            <div class="option" onclick="selectOption(this, false, 'adj-q5')">A) The book, that I read, was interesting.</div>
+                            <div class="option" onclick="selectOption(this, true, 'adj-q5')">B) The book that I read was interesting.</div>
+                            <div class="option" onclick="selectOption(this, false, 'adj-q5')">C) The book, whom I read, was interesting.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="score-card">
+                    <h3>🎯 Key Takeaways</h3>
+                    <ul style="text-align: left;">
+                        <li>✅ Use WHO/WHOM for people, WHICH/THAT for things</li>
+                        <li>✅ Restrictive = NO commas (essential info)</li>
+                        <li>✅ Nonrestrictive = USE commas (extra info)</li>
+                        <li>✅ Never use THAT after a comma!</li>
+                        <li>✅ Can reduce when pronoun is subject</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- UNIT 11: ADVERB CLAUSES -->
+            <div id="adverb" class="unit">
+                <h2 class="unit-title">⏰ Unit 11: Adverb Clauses</h2>
+
+                <div class="story-box">
+                    <p>📖 <strong>Adverb clauses are the "why, when, and how" storytellers!</strong> They explain circumstances: When did it happen? Why? Under what conditions?</p>
+                </div>
+
+                <div class="armenian">
+                    Մակբայական ստորադասյալ նախադասություններ (Adverb Clauses) բացատրում են ՝ երբ, ինչու, ինչպես։ Սկսվում են ստորադասական շաղկապներով (subordinating conjunctions)
+                </div>
+
+                <div class="concept-box">
+                    <h3>🎭 Types of Adverb Clauses</h3>
+                    
+                    <table>
+                        <tr>
+                            <th>Type</th>
+                            <th>Conjunctions</th>
+                            <th>Example</th>
+                        </tr>
+                        <tr>
+                            <td><strong>Time</strong><br><small>Ժամանակ</small></td>
+                            <td>when, while, before, after, until, as soon as, once</td>
+                            <td><span class="highlight">When</span> people are stressed, they exhibit symptoms.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Reason</strong><br><small>Պատճառ</small></td>
+                            <td>because, since</td>
+                            <td><span class="highlight">Because</span> his father left, his mother supported the family.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Contrast</strong><br><small>Հակադրություն</small></td>
+                            <td>while, whereas</td>
+                            <td><span class="highlight">While</span> his mother's career wasn't prosperous, Chaplin had success.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Concession</strong><br><small>Զիջում</small></td>
+                            <td>although, though, even though</td>
+                            <td><span class="highlight">Even though</span> Chaplin was difficult, his films were successful.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Purpose</strong><br><small>Նպատակ</small></td>
+                            <td>so that, in order that</td>
+                            <td>Chaplin visited <span class="highlight">so that</span> he could accept an award.</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="tip-box">
+                    <strong>Comma Rule:</strong> Adverb clause FIRST = use comma. Adverb clause SECOND = usually no comma!<br>
+                    ✅ <span class="highlight">After the game ended,</span> we went home.<br>
+                    ✅ We went home <span class="highlight">after the game ended</span>.
+                </div>
+
+                <div class="concept-box">
+                    <h3>✂️ Reducing Adverb Clauses</h3>
+                    <div class="armenian">
+                        Կարճացված մակբայական նախադասություններ (երբ սուբյեկտները նույնն են)
+                    </div>
+
+                    <div class="step-by-step">
+                        <h4>With "be" - Delete subject and "be"</h4>
+                        <div class="step">
+                            When people <del>are</del> stressed → <strong>When stressed</strong>, people...
+                        </div>
+                    </div>
+
+                    <div class="step-by-step">
+                        <h4>With other verbs - Delete subject, add -ing</h4>
+                        <div class="step">
+                            While people <del>sleep</del> → <strong>While sleeping</strong>, people...
+                        </div>
+                    </div>
+
+                    <div class="step-by-step">
+                        <h4>Reason clauses - Delete all, use -ing</h4>
+                        <div class="step">
+                            <del>Because the students had read</del> → <strong>Having read</strong> the manual...
+                        </div>
+                    </div>
+                </div>
+
+                <div class="error-box">
+                    <strong>Common Error 11.1: Wrong conjunction</strong><br>
+                    <div class="armenian">
+                        Սխալ շաղկապ օգտագործելը
+                    </div>
+                    <div class="comparison-table">
+                        <div class="comparison-item wrong">
+                            ❌ Communication failures happen <del>although</del> people misunderstand.<br>
+                            <small>Wrong meaning!</small>
+                        </div>
+                        <div class="comparison-item right">
+                            ✅ Communication failures happen <strong>because</strong> people misunderstand.<br>
+                            <small>Shows reason correctly</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="error-box">
+                    <strong>Common Error 11.2: Comma splice</strong><br>
+                    <div class="armenian">
+                        Ստորակետով սխալ միացում՝ պետք է շաղկապ օգտագործել
+                    </div>
+                    <div class="comparison-table">
+                        <div class="comparison-item wrong">
+                            ❌ The student is immersed in the language<del>,</del> he learns quickly.<br>
+                            <small>Comma splice! Need conjunction</small>
+                        </div>
+                        <div class="comparison-item right">
+                            ✅ <strong>When</strong> the student is immersed, he learns quickly.<br>
+                            <small>Correct with conjunction</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-section">
+                    <h3>🎮 Practice - 15 Questions</h3>
+
+                    <div class="practice-counter">Question 1 / 15</div>
+                    <div class="question">
+                        <p><strong>Choose the correct conjunction:</strong></p>
+                        <p>"I studied hard _____ I wanted to pass."</p>
+                        <div class="options">
+                            <div class="option" onclick="selectOption(this, true, 'adv-q1')">A) because</div>
+                            <div class="option" onclick="selectOption(this, false, 'adv-q1')">B) although</div>
+                            <div class="option" onclick="selectOption(this, false, 'adv-q1')">C) while</div>
+                        </div>
+                    </div>
+
+                    <div class="practice-counter">Question 2 / 15</div>
+                    <div class="question">
+                        <p><strong>Reduce this clause:</strong></p>
+                        <p>"When you drive in winter, you should be careful."</p>
+                        <input type="text" id="adv-a2" placeholder="When...">
+                        <button class="check-btn" onclick="checkAdv2()">Check</button>
+                        <div class="feedback" id="adv-f2"></div>
+                    </div>
+
+                    <div class="practice-counter">Question 3 / 15</div>
+                    <div class="question">
+                        <p><strong>Add comma if needed:</strong></p>
+                        <p>"The company succeeded___ because it had a strong product."</p>
+                        <input type="text" id="adv-a3" placeholder="comma or nothing?">
+                        <button class="check-btn" onclick="checkAdv3()">Check</button>
+                        <div class="feedback" id="adv-f3"></div>
+                    </div>
+                </div>
+
+                <div class="score-card">
+                    <h3>🎯 Key Takeaways</h3>
+                    <ul style="text-align: left;">
+                        <li>✅ Choose conjunction by meaning (time, reason, contrast, etc.)</li>
+                        <li>✅ Comma when clause comes FIRST</li>
+                        <li>✅ Can reduce when subjects are the same</li>
+                        <li>✅ Don't create comma splices!</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- UNIT 12: NOUN CLAUSES -->
+            <div id="noun" class="unit">
+                <h2 class="unit-title">💭 Unit 12: Noun Clauses</h2>
+
+                <div class="story-box">
+                    <p>📖 <strong>Noun clauses are like containers!</strong> They hold complete thoughts and work like nouns - as subjects, objects, or after "be".</p>
+                </div>
+
+                <div class="armenian">
+                    Գոյականային ստորադասյալ նախադասություններ (Noun Clauses) աշխատում են ինչպես գոյականներ։ Կարող են լինել սուբյեկտ, օբյեկտ կամ լինել BE բայից հետո։
+                </div>
+
+                <div class="concept-box">
+                    <h3>🎯 Types of Noun Clauses</h3>
+
+                    <div class="explanation-detail">
+                        <h4>1️⃣ "That" Clauses (from statements)</h4>
+                        <div class="example-box">
+                            Scientists know <span class="highlight">that the earth is getting warmer</span>.<br>
+                            <div class="armenian">
+                                Գիտնականները գիտեն, որ Երկիրը ավելի տաք է դառնում։
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="explanation-detail">
+                        <h4>2️⃣ Wh- Clauses (from questions)</h4>
+                        <div class="example-box">
+                            The report explains <span class="highlight">how the banks were rescued</span>.<br>
+                            <div class="armenian">
+                                Զեկույցը բացատրում է, թե ինչպես փրկվեցին բանկերը։
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="explanation-detail">
+                        <h4>3️⃣ If/Whether Clauses (from yes/no questions)</h4>
+                        <div class="example-box">
+                            They wanted to know <span class="highlight">if the experiment was successful</span>.<br>
+                            <div class="armenian">
+                                Նրանք ուզում էին իմանալ, արդյոք փորձը հաջողվեց։
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tip-box">
+                    In noun clauses, use STATEMENT word order, NOT question order!<br>
+                    ❌ I wonder how <del>can we</del> save languages.<br>
+                    ✅ I wonder how <strong>we can</strong> save languages.
+                </div>
+
+                <div class="concept-box">
+                    <h3>🗣️ Reported Speech (Indirect Speech)</h3>
+                    <div class="armenian">
+                        Անուղղակի խոսք - ինչպես փոխանցել ուրիշի խոսքը
+                    </div>
+
+                    <table>
+                        <tr>
+                            <th>Direct Speech</th>
+                            <th>Indirect Speech</th>
+                        </tr>
+                        <tr>
+                            <td>"I <strong>am</strong> going"</td>
+                            <td>She said she <strong>was</strong> going</td>
+                        </tr>
+                        <tr>
+                            <td>"Interest rates <strong>are</strong> stable"</td>
+                            <td>They said interest rates <strong>were</strong> stable</td>
+                        </tr>
+                        <tr>
+                            <td>"I <strong>will</strong> help"</td>
+                            <td>He said he <strong>would</strong> help</td>
+                        </tr>
+                        <tr>
+                            <td>"I <strong>can</strong> do it"</td>
+                            <td>She said she <strong>could</strong> do it</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="error-box">
+                    <strong>Common Error 12.1: Question word order</strong><br>
+                    <div class="armenian">
+                        Հարցական կարգ օգտագործելը գոյականային նախադասություններում
+                    </div>
+                    <div class="comparison-table">
+                        <div class="comparison-item wrong">
+                            ❌ Linguists wonder how <del>can we</del> save languages.<br>
+                            <small>Question order - wrong!</small>
+                        </div>
+                        <div class="comparison-item right">
+                            ✅ Linguists wonder how <strong>we can</strong> save languages.<br>
+                            <small>Statement order - correct!</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="error-box">
+                    <strong>Common Error 12.2: That vs. What</strong><br>
+                    <div class="armenian">
+                        "That" և "What" շփոթելը
+                    </div>
+                    <div class="comparison-table">
+                        <div class="comparison-item wrong">
+                            ❌ The paper didn't report <del>what</del> the researchers discovered.<br>
+                            <small>Use "that" for statements!</small>
+                        </div>
+                        <div class="comparison-item right">
+                            ✅ The paper didn't report <strong>that</strong> the researchers discovered something.<br>
+                            <small>"That" introduces a statement</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="practice-section">
+                    <h3>🎮 Practice - 15 Questions</h3>
+
+                    <div class="practice-counter">Question 1 / 15</div>
+                    <div class="question">
+                        <p><strong>Convert to noun clause:</strong></p>
+                        <p>"Where did the money go?" → The audit revealed...</p>
+                        <input type="text" id="noun-a1" placeholder="The audit revealed...">
+                        <button class="check-btn" onclick="checkNoun1()">Check</button>
+                        <div class="feedback" id="noun-f1"></div>
+                    </div>
+
+                    <div class="practice-counter">Question 2 / 15</div>
+                    <div class="question">
+                        <p><strong>Change to indirect speech:</strong></p>
+                        <p>She said, "I am going to the library."</p>
+                        <input type="text" id="noun-a2" placeholder="She said...">
+                        <button class="check-btn" onclick="checkNoun2()">Check</button>
+                        <div class="feedback" id="noun-f2"></div>
+                    </div>
+
+                    <div class="practice-counter">Question 3 / 15</div>
+                    <div class="question">
+                        <p><strong>Which is correct?</strong></p>
+                        <div class="options">
+                            <div class="option" onclick="selectOption(this, false, 'noun-q3')">A) I don't know what does she want.</div>
+                            <div class="option" onclick="selectOption(this, true, 'noun-q3')">B) I don't know what she wants.</div>
+                            <div class="option" onclick="selectOption(this, false, 'noun-q3')">C) I don't know that she wants.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="score-card">
+                    <h3>🎯 Key Takeaways</h3>
+                    <ul style="text-align: left;">
+                        <li>✅ Use STATEMENT word order in noun clauses</li>
+                        <li>✅ "That" for statements, "What" for unknown things</li>
+                        <li>✅ Change tenses in reported speech</li>
+                        <li>✅ Noun clauses work like nouns!</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Track score
+        let correctAnswers = 0;
+        let totalQuestions = 20;
+
+        // Navigation
+        function showUnit(unitId) {
+            document.querySelectorAll('.unit').forEach(unit => unit.classList.remove('active'));
+            document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(unitId).classList.add('active');
+            event.target.classList.add('active');
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        // Option selection for multiple choice
+        function selectOption(element, isCorrect, questionId) {
+            const options = element.parentElement.querySelectorAll('.option');
+            
+            // Check if already answered
+            const alreadyAnswered = Array.from(options).some(opt => 
+                opt.classList.contains('correct') || opt.classList.contains('incorrect')
+            );
+            
+            if (alreadyAnswered) return; // Don't allow changing answer
+            
+            options.forEach(opt => {
+                opt.style.cursor = 'default';
+                opt.onclick = null;
+            });
+            
+            if (isCorrect) {
+                element.classList.add('correct');
+                showFeedback(element, true, "🎉 Excellent! That's correct!");
+                correctAnswers++;
+            } else {
+                element.classList.add('incorrect');
+                showFeedback(element, false, "❌ Not quite right. Review the rules and try to understand why this is incorrect.");
+            }
+        }
+
+        function showFeedback(element, isCorrect, message) {
+            const question = element.closest('.question');
+            let feedback = question.querySelector('.feedback');
+            
+            if (!feedback) {
+                feedback = document.createElement('div');
+                feedback.className = 'feedback';
+                question.appendChild(feedback);
+            }
+            
+            feedback.textContent = message;
+            feedback.className = isCorrect ? 'feedback show correct' : 'feedback show incorrect';
+        }
+
+        // Question checkers
+        function checkPassive1() {
+            const answer = document.getElementById('passive-a1').value.trim().toLowerCase();
+            const feedback = document.getElementById('passive-f1');
+            
+            if ((answer.includes('planet') || answer.includes('new planet')) && 
+                answer.includes('was discovered') && 
+                answer.includes('last year')) {
+                feedback.textContent = "🎉 Perfect! 'A new planet was discovered (by scientists) last year.' Great job!";
+                feedback.className = 'feedback show correct';
+                correctAnswers++;
+            } else if (answer.includes('planet') && answer.includes('discovered')) {
+                feedback.textContent = "⚠️ Close! Remember: 'was discovered' (not just 'discovered'). Also include 'last year'.";
+                feedback.className = 'feedback show incorrect';
+            } else {
+                feedback.textContent = "💡 Try: 'A new planet was discovered last year.' (Object + was + past participle + time)";
+                feedback.className = 'feedback show incorrect';
+            }
+        }
+
+        function checkPassive3() {
+            const answer = document.getElementById('passive-a3').value.trim().toLowerCase();
+            const feedback = document.getElementById('passive-f3');
+            
+            if (answer.includes('were analyzed') || answer.includes('were analysed')) {
+                feedback.textContent = "🎉 Excellent! 'were analyzed' is perfect - past tense passive!";
+                feedback.className = 'feedback show correct';
+                correctAnswers++;
+            } else if (answer.includes('analyzed') || answer.includes('analysed')) {
+                feedback.textContent = "⚠️ Don't forget 'were' before 'analyzed'! (be + past participle)";
+                feedback.className = 'feedback show incorrect';
+            } else {
+                feedback.textContent = "💡 Hint: Simple past passive = was/were + past participle. Answer: 'were analyzed'";
+                feedback.className = 'feedback show incorrect';
+            }
+        }
+
+        function checkPassive4() {
+            const answer = document.getElementById('passive-a4').value.trim().toLowerCase();
+            const feedback = document.getElementById('passive-f4');
+            
+            if (answer.includes('was conducted')) {
+                feedback.textContent = "🎉 Perfect! You caught the error - it should be 'conducted' (past participle), not 'conduct'!";
+                feedback.className = 'feedback show correct';
+                correctAnswers++;
+            } else {
+                feedback.textContent = "💡 The error is 'conduct' - it should be the past participle 'conducted'. Try again!";
+                feedback.className = 'feedback show incorrect';
+            }
+        }
+
+        function checkPassive6() {
+            const answer = document.getElementById('passive-a6').value.trim().toLowerCase();
+            const feedback = document.getElementById('passive-f6');
+            
+            if (answer.includes('have been built') && answer.includes('three')) {
+                feedback.textContent = "🎉 Excellent! 'Three new schools have been built in our city this year.' Perfect present perfect passive!";
+                feedback.className = 'feedback show correct';
+                correctAnswers++;
+            } else {
+                feedback.textContent = "💡 Present Perfect Passive = have/has been + past participle. Try: 'Three new schools have been built...'";
+                feedback.className = 'feedback show incorrect';
+            }
+        }
+
+        function checkPassive7() {
+            const answer = document.getElementById('passive-a7').value.trim().toLowerCase();
+            const feedback = document.getElementById('passive-f7');
+            
+            if (answer.includes('can be solved')) {
+                feedback.textContent = "🎉 Perfect! 'can be solved' is the correct modal passive form!";
+                feedback.className = 'feedback show correct';
+                correctAnswers++;
+            } else {
+                feedback.textContent = "💡 Modal passive = modal + be + past participle. Answer: 'can be solved'";
+                feedback.className = 'feedback show incorrect';
+            }
+        }
+
+        function checkPassive9() {
+            const answer = document.getElementById('passive-a9').value.trim().toLowerCase();
+            const feedback = document.getElementById('passive-f9');
+            
+            if (answer.includes('being criticized') || answer.includes('being criticised')) {
+                feedback.textContent = "🎉 Excellent! 'being criticized' is the perfect passive gerund!";
+                feedback.className = 'feedback show correct';
+                correctAnswers++;
+            } else {
+                feedback.textContent = "💡 Passive gerund = being + past participle. Answer: 'being criticized'";
+                feedback.className = 'feedback show incorrect';
+            }
+        }
+
+        function checkPassive10() {
+            const answer = document.getElementById('passive-a10').value.trim().toLowerCase();
+            const feedback = document.getElementById('passive-f10');
+            
+            if (answer.includes('could have been prevented')) {
+                feedback.textContent = "🎉 Perfect! 'could have been prevented' - excellent past modal passive!";
+                feedback.className = 'feedback show correct';
+                correctAnswers++;
+            } else {
+                feedback.textContent = "💡 Past modal passive = modal + have been + past participle. Try: 'could have been prevented'";
+                feedback.className = 'feedback show incorrect';
+            }
+        }
+
+        function checkPassive12() {
+            const answer = document.getElementById('passive-a12').value.trim().toLowerCase();
+            const feedback = document.getElementById('passive-f12');
+            
+            if (answer.includes('are being reviewed')) {
+                feedback.textContent = "🎉 Excellent! 'All applications are being reviewed this week.' Perfect present progressive passive!";
+                feedback.className = 'feedback show correct';
+                correctAnswers++;
+            } else {
+                feedback.textContent = "💡 Present Progressive Passive = am/is/are being + past participle. Answer: 'are being reviewed'";
+                feedback.className = 'feedback show incorrect';
+            }
+        }
+
+        function checkPassive14() {
+            const answer = document.getElementById('passive-a14').value.trim().toLowerCase();
+            const feedback = document.getElementById('passive-f14');
+            
+            if (answer.includes('die') && answer.includes('intransitive') || 
+                (answer.includes('died') && answer.includes('many people died'))) {
+                feedback.textContent = "🎉 Excellent! You understood that 'die' is intransitive and cannot be passive. Correct: 'Many people died in the earthquake.'";
+                feedback.className = 'feedback show correct';
+                correctAnswers++;
+            } else {
+                feedback.textContent = "💡 Hint: 'Die' is intransitive (no object), so it cannot be passive. The correct sentence is: 'Many people died in the earthquake.'";
+                feedback.className = 'feedback show incorrect';
+            }
+        }
+
+        function checkPassive16() {
+            const answer = document.getElementById('passive-a16').value.trim().toLowerCase();
+            const feedback = document.getElementById('passive-f16');
+            
+            if (answer.includes('had been stolen')) {
+                feedback.textContent = "🎉 Perfect! 'The painting had been stolen before the museum opened.' Great past perfect passive!";
+                feedback.className = 'feedback show correct';
+                correctAnswers++;
+            } else {
+                feedback.textContent = "💡 Past Perfect Passive = had been + past participle. Answer: 'The painting had been stolen...'";
+                feedback.className = 'feedback show incorrect';
+            }
+        }
+
+        function checkPassive17() {
+            const answer = document.getElementById('passive-a17').value.trim().toLowerCase();
+            const feedback = document.getElementById('passive-f17');
+            
+            if (answer.includes('will be completed')) {
+                feedback.textContent = "🎉 Excellent! 'will be completed' is the correct future passive!";
+                feedback.className = 'feedback show correct';
+                correctAnswers++;
+            } else {
+                feedback.textContent = "💡 Future Passive = will be + past participle. Answer: 'will be completed'";
+                feedback.className = 'feedback show incorrect';
+            }
+        }
+
+        function checkPassive18() {
+            const answer = document.getElementById('passive-a18').value.trim().toLowerCase();
+            const feedback = document.getElementById('passive-f18');
+            
+            if (answer.includes('was built') && answer.includes('was renovated')) {
+                feedback.textContent = "🎉 Excellent! 'The house was built in 1995 and (it) was renovated in 2010.' Perfect!";
+                feedback.className = 'feedback show correct';
+                correctAnswers++;
+            } else {
+                feedback.textContent = "💡 You need two passive forms: 'The house was built in 1995 and (it) was renovated in 2010.'";
+                feedback.className = 'feedback show incorrect';
+            }
+        }
+
+        function checkPassive20() {
+            const answer = document.getElementById('passive-a20').value.trim().toLowerCase();
+            const feedback = document.getElementById('passive-f20');
+            
+            if ((answer.includes('objective') || answer.includes('professional')) &&
+                (answer.includes('focus') || answer.includes('result') || answer.includes('impersonal'))) {
+                feedback.textContent = "🎉 Excellent explanation! Scientists use passive to sound objective, focus on results rather than researchers, and maintain a professional, impersonal tone!";
+                feedback.className = 'feedback show correct';
+                correctAnswers++;
+            } else {
+                feedback.textContent = "💡 Think about: 1) Objectivity (sounds more scientific), 2) Focus on research/results (not on 'we'), 3) Professional tone";
+                feedback.className = 'feedback show incorrect';
+            }
+        }
+
+        // Show score
+        function showScore() {
+            alert(`Your score: ${correctAnswers} out of ${totalQuestions} correct!`);
+        }
+
+        // Unit 10: Adjective Clauses Functions
+        function checkAdj1() {
+            const answer = document.getElementById('adj-a1').value.trim().toLowerCase();
+            const feedback = document.getElementById('adj-f1');
+            
+            if (answer.includes('woman') && (answer.includes('who speaks') || answer.includes('that speaks'))) {
+                feedback.textContent = "🎉 Perfect! 'I know a woman who speaks five languages.' or 'I know a woman that speaks five languages.' Both are correct!";
+                feedback.className = 'feedback show correct';
+            } else {
+                feedback.textContent = "💡 Try: 'I know a woman who/that speaks five languages.' (Use who or that for people as subject)";
+                feedback.className = 'feedback show incorrect';
+            }
+        }
+
+        function checkAdj3() {
+            const answer = document.getElementById('adj-a3').value.trim().toLowerCase();
+            const feedback = document.getElementById('adj-f3');
+            
+            if (answer.includes('students studying') || answer.includes('studying for finals')) {
+                feedback.textContent = "🎉 Excellent! 'The students studying for finals are very stressed.' Perfect reduction!";
+                feedback.className = 'feedback show correct';
+            } else {
+                feedback.textContent = "💡 Remove 'who are' and keep -ing: 'The students studying for finals...'";
+                feedback.className = 'feedback show incorrect';
+            }
+        }
+
+        function checkAdj4() {
+            const answer = document.getElementById('adj-a4').value.trim().toLowerCase();
+            const feedback = document.getElementById('adj-f4');
+            
+            if ((answer.includes('who lives in boston') && !answer.includes(',')) || 
+                answer.includes('restrictive') || answer.includes('essential')) {
+                feedback.textContent = "🎉 Good thinking! Without commas means it's restrictive (identifying WHICH sister). With commas would mean extra info about your only sister.";
+                feedback.className = 'feedback show correct';
+            } else {
+                feedback.textContent = "💡 Think: Do you have one sister or multiple? No commas = identifies which one. Commas = extra info.";
+                feedback.className = 'feedback show incorrect';
+            }
+        }
+
+        // Unit 11: Adverb Clauses Functions
+        function checkAdv2() {
+            const answer = document.getElementById('adv-a2').value.trim().toLowerCase();
+            const feedback = document.getElementById('adv-f2');
+            
+            if (answer.includes('when driving') || answer.includes('driving in winter')) {
+                feedback.textContent = "🎉 Great! 'When driving in winter, you should be careful.' Nice reduction!";
+                feedback.className = 'feedback show correct';
+            } else {
+                feedback.textContent = "💡 Delete 'you' and change 'drive' to 'driving': 'When driving in winter...'";
+                feedback.className = 'feedback show incorrect';
+            }
+        }
+
+        function checkAdv3() {
+            const answer = document.getElementById('adv-a3').value.trim();
+            const feedback = document.getElementById('adv-f3');
+            
+            if (answer === '' || answer === 'nothing' || answer.toLowerCase() === 'no comma') {
+                feedback.textContent = "🎉 Correct! No comma when adverb clause comes AFTER the main clause!";
+                feedback.className = 'feedback show correct';
+            } else {
+                feedback.textContent = "⚠️ When adverb clause is at the END, we don't use a comma!";
+                feedback.className = 'feedback show incorrect';
+            }
+        }
+
+        // Unit 12: Noun Clauses Functions
+        function checkNoun1() {
+            const answer = document.getElementById('noun-a1').value.trim().toLowerCase();
+            const feedback = document.getElementById('noun-f1');
+            
+            if (answer.includes('where the money went')) {
+                feedback.textContent = "🎉 Perfect! 'The audit revealed where the money went.' Excellent statement word order!";
+                feedback.className = 'feedback show correct';
+            } else {
+                feedback.textContent = "💡 Use statement order: 'where the money went' (not 'where did the money go')";
+                feedback.className = 'feedback show incorrect';
+            }
+        }
+
+        function checkNoun2() {
+            const answer = document.getElementById('noun-a2').value.trim().toLowerCase();
+            const feedback = document.getElementById('noun-f2');
+            
+            if (answer.includes('she said') && answer.includes('was going')) {
+                feedback.textContent = "🎉 Excellent! 'She said (that) she was going to the library.' Perfect tense change!";
+                feedback.className = 'feedback show correct';
+            } else if (answer.includes('is going')) {
+                feedback.textContent = "⚠️ Change present progressive (is going) to past progressive (was going)!";
+                feedback.className = 'feedback show incorrect';
+            } else {
+                feedback.textContent = "💡 Try: 'She said (that) she was going to the library.'";
+                feedback.className = 'feedback show incorrect';
+            }
+        }
+    </script>
+</body>
+</html>
